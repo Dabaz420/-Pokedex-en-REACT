@@ -1,0 +1,11 @@
+.link-home{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.img-home{
+    width: 32px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
