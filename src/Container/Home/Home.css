@@ -2,22 +2,37 @@
     font-size: 50px;
     text-align: center;
     margin-top: 5px;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
 
 .container-pokemon{
+    width: 95%;
+    max-height: 80vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: 3px solid rgb(201, 5, 5);
+    border-radius: 10px;
+    background-color: #c4c4c4
 }
 
 .card-link{
-    width: auto;
+    width: 90%;
     height: auto;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    justify-content: flex-start;
+    align-items: center;
     text-decoration: none;
     color: #222;
-    margin: 0px 5px 15px 10px;
-    background-color: #53535336;
+    margin: 10px;
+    background-color: lightblue;
     border-radius: 2px;
     border: 1px solid black;
     cursor: pointer;
@@ -27,39 +42,107 @@
     transform: scale(1.1);
 }
 
+.id-pokemon{
+    margin: 10px;
+}
+
+.start{
+    height: 124px;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.stats{
+    height: 124px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "base-stat hp special-attack special-defense"
+                         "base-stat attack defense speed";
+    align-items: center;
+}
+
+.base-stat{
+    width: 100%;
+    grid-area: base-stat;
+}
+
+.hp{
+    width: 100%;
+    grid-area: hp;
+    text-align: left;
+}
+
+.special-attack{
+    width: 100%;
+    grid-area: special-attack;
+    text-align: left;
+}
+
+.special-defense{
+    width: 100%;
+    grid-area: special-defense;
+    text-align: left;
+}
+
+.attack{
+    width: 100%;
+    grid-area: attack;
+    text-align: left;
+}
+
+.defense{
+    width: 100%;
+    grid-area: defense;
+    text-align: left;
+}
+
+.speed{
+    width: 100%;
+    grid-area: speed;
+    text-align: left;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .charging{
     font-weight: bold;
     text-align: center;
     width: 100%;
 }
 
-.alternative-link{
-    width: 90%;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
-
-.alternative-title{
-    margin-bottom: 10px;
-}
-
-.pokedex{
-    overflow: hidden;
-    overflow-y: scroll;
-    width: 100%;
-    max-height: 80vh;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    border: 1px solid red;
-}
-
 @media screen and (max-width: 600px) {
     .home-title{
         font-size: 30px;
-        margin-bottom: 50px;
+    }
+
+    .id-pokemon{
+        display: none;
+    }
+
+    .base-stat{
+        display: none;
+    }
+
+    .stats{
+        font-size: 14px;
+        font-weight: normal;
+        margin-left: 3px;
+        display: grid;
+        display: -ms-grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "hp special-attack"
+                             "special-defense attack"
+                             "defense speed";
     }
 }

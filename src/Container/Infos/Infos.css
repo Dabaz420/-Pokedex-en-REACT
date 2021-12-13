@@ -1,52 +1,204 @@
-.infos-pokemon{
+.pokemon-infos{
+    height: 100%;
+    width: 95%;
+    margin: 30px;
     display: flex;
-    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
     justify-content: center;
     align-items: center;
+    background-color: lightblue;
+    border: 3px #c4c4c4 solid;
+    border-radius: 10px;
 }
 
-.pokemon-img{
-    width: 300px;
-}
+    .pokemon-presentation{
+        width: 30%;
+        height: 80%;
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.527);
+        border: 3px solid rgb(201, 5, 5);
+        border-right: 1px solid #c4c4c4;
+        border-radius: 10px 0px 0px 10px ;
+        padding: 15px;
+    }
+    /* ///////////////////////////////////////////////// */
+    /**/
+    /**/    .pokemon-presentation h1{
+    /**/        text-transform: capitalize;
+    /**/        width: fit-content;
+    /**/        margin-bottom: 30px;
+    /**/    }
+    /**/
+    /**/    .pokemon-img{
+    /**/        width: 100%;
+    /**/    }
+    /**/
+    /* ///////////////////////////////////////////////// */
 
-.pokemon-types{
-    display: flex;
-}
 
-.infos-pokemon h1{
-    text-transform: capitalize;
-    margin-top: 5px;
-    margin-bottom: 50px;
-}
 
-.pokemon-size{
-    width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 50px;
-}
+    .pokemon-description {
+        height: 80%;
+        width: 55%;
+        padding: 10px;
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.527);
+        border: 3px solid rgb(201, 5, 5);
+        border-left: 2px solid #c4c4c4;
+        border-radius: 0px 10px 10px 0px ;
+    }
+    /* ///////////////////////////////////////////////// */
+    /**/
+    /**/    .pokemon-size{
+    /**/        display: flex;
+    /**/        display: -webkit-box;
+    /**/        display: -ms-flexbox;
+    /**/        flex-direction: column;
+    /**/        width: 100%;
+    /**/        border: 3px #7b7bff solid;
+    /**/        background-color: #dededeb8;
+    /**/        border-radius: 10px;
+    /**/        padding: 15px;
+    /**/    }
+    /**/    /* ///////////////////////////////////////////////// */
+    /**/    /**/
+    /**/    /**/    .pokemon-types{
+    /**/    /**/        display: flex;
+    /**/    /**/        display: -webkit-box;
+    /**/    /**/        display: -ms-flexbox;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .pokemon-types ul{
+    /**/    /**/        margin-left: 10px;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .pokemon-type{
+    /**/    /**/        list-style: none;
+    /**/    /**/        text-align: start;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .pokemon-weightAndHeight {
+    /**/    /**/        display: flex;
+    /**/    /**/        margin-top: 20px;
+    /**/    /**/        margin-bottom: 20px;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .pokemon-weightAndHeight p:nth-child(2) {
+    /**/    /**/        margin-left: 10px;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .pokemon-size p {
+    /**/    /**/        width: fit-content;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .pokemon-evolution{
+    /**/    /**/        font-weight: bold;
+    /**/    /**/        display: flex;
+    /**/    /**/        display: -webkit-box;
+    /**/    /**/        display: -ms-flexbox;
+    /**/    /**/        justify-content: space-around;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .pokemon-evolution a{
+    /**/    /**/        color: #222;
+    /**/    /**/        text-decoration: underline;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .pokemon-evolution p{
+    /**/    /**/        color: #222;
+    /**/    /**/        text-decoration: underline;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/
+    /**/    /* ///////////////////////////////////////////////// */
+    /**/
+    /**/
+    /**/    .pokemon-stats{
+    /**/        width: 100%;
+    /**/        display: grid;
+    /**/        display: -ms-grid;
+    /**/        grid-template-columns: 1fr 1fr 1fr 1fr;
+    /**/        grid-template-rows: 1fr 2fr 1fr;
+    /**/        grid-template-areas: "base-stat hp special-attack special-defense"
+    /**/                             ". . . ."
+    /**/                             ". attack defense speed";
+    /**/        align-items: center;
+    /**/        border: 3px #7b7bff solid;
+    /**/        background-color: #dededeb8;
+    /**/        border-radius: 10px;
+    /**/        padding: 15px;
+    /**/    }
+    /**/    /* ///////////////////////////////////////////////// */
+    /**/    /**/
+    /**/    /**/    .base-stat{
+    /**/    /**/        width: 100%;
+    /**/    /**/        grid-area: base-stat;
+    /**/    /**/        text-decoration: underline;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .hp{
+    /**/    /**/        width: 100%;
+    /**/    /**/        grid-area: hp;
+    /**/    /**/        text-align: left;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .special-attack{
+    /**/    /**/        width: 100%;
+    /**/    /**/        grid-area: special-attack;
+    /**/    /**/        text-align: left;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .special-defense{
+    /**/    /**/        width: 100%;
+    /**/    /**/        grid-area: special-defense;
+    /**/    /**/        text-align: left;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .attack{
+    /**/    /**/        width: 100%;
+    /**/    /**/        grid-area: attack;
+    /**/    /**/        text-align: left;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .defense{
+    /**/    /**/        width: 100%;
+    /**/    /**/        grid-area: defense;
+    /**/    /**/        text-align: left;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .speed{
+    /**/    /**/        width: 100%;
+    /**/    /**/        grid-area: speed;
+    /**/    /**/        text-align: left;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /**/    .pokemon-stats p {
+    /**/    /**/        width: fit-content;
+    /**/    /**/    }
+    /**/    /**/
+    /**/    /* ///////////////////////////////////////////////// */
+    /**/
+    /* ///////////////////////////////////////////////// */
 
-.pokemon-type{
-    list-style: none;
-    text-align: start;
-    margin-left: 10px;
-}
-
-.pokemon-evolution{
-    font-size: 20px;
-    font-weight: bold;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.pokemon-evolution a{
-    color: #222;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-decoration: underline;
+@media screen and (max-width: 1000px) {
+    .pokemon-stats{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "base-stat hp special-attack"
+                             ". special-defense attack"
+                             ". defense speed";
+    }
 }
 
 @media screen and (max-width: 600px) {

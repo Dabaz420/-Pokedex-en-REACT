@@ -31,23 +31,41 @@ export default function Home() {
         <>
             <h1 className='home-title'>Le Pokedex en REACT</h1>
             <div className='container-pokemon'>
-            {
-            pokemons.length === 151 ?
+            {pokemons.length === 151 ?
                 pokemons.map(item => {
                     return(
                         <Link className="card-link" id={item.id} key={uuidv4()} to={{
-                                pathname: `Infos/${item.id}`,
+                                pathname: `Infos/${item.id}`
                             }}
                         >
-                            <div className='id-pokemon'>#{item.id}</div>
-                            <Card >
-                                <h4 className='card-title'>{item.species.name}</h4>
-                                <img src={item.sprites.front_default} alt={item.species.name} />
-                            </Card>
+                            <div className="start">
+                                <div className='id-pokemon'>#{item.id}</div>
+                                <Card >
+                                    <h4 className='card-title'>{item.species.name}</h4>
+                                    <img src={item.sprites.front_default} alt={item.species.name} />
+                                </Card>
+                            </div>
+                            <div className='stats'>
+                                <p className="base-stat">Base Stats :</p>
+                                {item.stats.map(item => {
+                                    if (item.stat.name === "special-defense") {
+                                        return(
+                                            <p key={uuidv4()} className={item.stat.name}>sp.defense : {item.base_stat}</p> 
+                                        )
+                                    } else if(item.stat.name === "special-attack"){
+                                        return(
+                                            <p key={uuidv4()} className={item.stat.name}>sp.attack : {item.base_stat}</p> 
+                                        )
+                                    } else {
+                                        return(
+                                            <p key={uuidv4()} className={item.stat.name}>{item.stat.name} : {item.base_stat}</p> 
+                                        )
+                                    }
+                                })}
+                            </div>
                         </Link>
                     )
-                }) : <h2 className="charging">Charging...</h2>
-            }
+                }) : <h2 className="charging">Charging...</h2>}
             </div>
         </>
     )
